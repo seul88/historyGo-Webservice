@@ -55,7 +55,7 @@ public class DbExecutor implements CommandLineRunner {
 
         User u1 = new User(
                 "Seul88",
-                0,
+                15,
                 new ArrayList<>()
         );
 
@@ -69,7 +69,7 @@ public class DbExecutor implements CommandLineRunner {
 
         User u3 = new User(
                 "Bolivar",
-                0,
+                15,
                 Arrays.asList(
                         ratusz, politechnika, zoo, zamek, malta
                 )
@@ -77,7 +77,7 @@ public class DbExecutor implements CommandLineRunner {
 
         User u4 = new User(
                 "Matiiii",
-                0,
+                15,
                 Arrays.asList(
                          politechnika, zoo,  malta
                 )
@@ -101,7 +101,7 @@ public class DbExecutor implements CommandLineRunner {
 
         User u7 = new User(
                 "RegnaR",
-                0,
+                100,
                 Arrays.asList(
                          zamek
                 )
