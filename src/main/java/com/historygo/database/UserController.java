@@ -1,6 +1,9 @@
 package com.historygo.database;
 
 
+import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.core.types.dsl.NumberExpression;
+import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,25 +54,33 @@ public class UserController {
 
     @GetMapping("/name/{name}")
     public User getByName(@PathVariable("name") String name){
-        User user = this.userRepository.findByName(name);
+        User user = this.userRepository.findByNameIgnoreCase(name);
 
         return user;
     }
 
     @PutMapping("/name/{name}")
     public void setUserName(@PathVariable("name") String name, @RequestBody String nick){
-        User user = this.userRepository.findByName(name);
+        User user = this.userRepository.findByNameIgnoreCase(name);
         user.setName(nick);
         this.userRepository.save(user);
     }
 
-    // find users with points more than {points}
+
     @GetMapping("/points/{points}")
     public List<User> getByPoints(@PathVariable("points") int points){
+        // find users with points more than {points} variable
+
         List<User> users = this.userRepository.findByPointsGreaterThan(points);
 
         return users;
     }
+
+
+
+    // TODO
+    // 1. sumowanie punktow dla uzytkownika (po polach Points w Places)
+    // 2. tworzenie rankingu - sortowanie uzytkownikow po punktach
 
 
 }

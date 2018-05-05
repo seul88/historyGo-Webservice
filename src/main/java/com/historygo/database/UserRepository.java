@@ -1,6 +1,7 @@
 package com.historygo.database;
 
 
+import com.querydsl.core.types.dsl.NumberExpression;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.querydsl.QueryDslPredicateExecutor;
 import org.springframework.stereotype.Repository;
@@ -14,5 +15,6 @@ public interface UserRepository extends MongoRepository<User, String>, QueryDslP
 
     List<User> findByPointsGreaterThan(int points);
 
-    User findByName(String name);
+    User findByNameIgnoreCase(String name);
+
 }
