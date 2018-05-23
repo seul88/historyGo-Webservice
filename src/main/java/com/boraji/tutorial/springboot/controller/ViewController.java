@@ -3,6 +3,7 @@ package com.boraji.tutorial.springboot.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -41,12 +42,12 @@ public class ViewController {
       return "hello";
    }
 
-   @PostMapping("listUsers")
-   public String listUsers(Model model){
+   @PostMapping("/listUsers")
+   public String listUsers(ModelMap model){
       ArrayList<User> users = new ArrayList<>();
       users = (ArrayList<User>) userRepository.findAll();
-      model.addAttribute(users);
+      model.addAttribute("users", users);
 
-      return "usersList";
+      return "users";
    }
 }

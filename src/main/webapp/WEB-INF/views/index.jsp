@@ -29,7 +29,7 @@
   </div>
 
   <div class="form">
-    <form action="listUsers" method="post" onsubmit="return validate()">
+    <form action="listUsers" method="post">
     List all players:</br>
     <input type="submit" value="Find Player">
     </form>

@@ -58,6 +58,16 @@ public class User {
         return places;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", points=" + points +
+                ", places=" + places +
+                '}';
+    }
+
     public void setPlaces(List<Place> places) {
         this.places = places;
     }
