@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-2" pageEncoding="ISO-8859-2"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +13,10 @@
   <h2>Player ${name}</h2>
   <h2>Points ${points}</h2>
   <h2>ID ${id}</h2>
-
+  <c:forEach items="${places}" var="module">
+    ${module.name}</br>
+    ${module.description}</br>
+    ${module.points}</br></br>
+  </c:forEach>
 </body>
 </html>
