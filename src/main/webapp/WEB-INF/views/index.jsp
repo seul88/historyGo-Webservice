@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="/resources/css/style.css">
 <script type="text/javascript" src="/resources/js/app.js"></script>
 
-<title>Spring Boot</title>
+<title>HistoryGO</title>
 </head>
 <body>
-  <h1>Spring Boot - MVC web application example</h1>
+  <h1>HistoryGO Players' Database</h1>
   <hr>
 
   <div class="form">
@@ -19,10 +19,19 @@
       <table>
         <tr>
           <td>Enter player name</td>
+        </tr>
+        <tr>
           <td><input id="name" name="name"></td>
           <td><input type="submit" value="Submit"></td>
         </tr>
       </table>
+    </form>
+  </div>
+
+  <div class="form">
+    <form action="listUsers" method="post" onsubmit="return validate()">
+    List all players:</br>
+    <input type="submit" value="Find Player">
     </form>
   </div>
 

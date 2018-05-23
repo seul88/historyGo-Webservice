@@ -7,8 +7,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+
 @Controller
-public class HelloController {
+public class ViewController {
 
    @Autowired
    UserRepository userRepository;
@@ -31,13 +33,20 @@ public class HelloController {
          model.addAttribute("id", user.getId());
       }
       catch (NullPointerException ex){
-
-         model.addAttribute("name", "AAAAAAAAAAAAAAAAAA");
-         System.out.println("Player not found");
-         return "hello";
+         model.addAttribute("errorMessage", "Player not found!");
+         return "errorMsg";
       }
 
 
       return "hello";
+   }
+
+   @PostMapping("listUsers")
+   public String listUsers(Model model){
+      ArrayList<User> users = new ArrayList<>();
+      users = (ArrayList<User>) userRepository.findAll();
+      model.addAttribute(users);
+
+      return "usersList";
    }
 }
