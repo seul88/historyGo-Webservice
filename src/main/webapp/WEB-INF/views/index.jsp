@@ -18,7 +18,7 @@
     <form action="hello" method="post" onsubmit="return validate()">
       <table>
         <tr>
-          <td>Enter Your name</td>
+          <td>Enter player name</td>
           <td><input id="name" name="name"></td>
           <td><input type="submit" value="Submit"></td>
         </tr>

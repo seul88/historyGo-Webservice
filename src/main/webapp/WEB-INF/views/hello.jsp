@@ -10,7 +10,9 @@
   <h1>Spring Boot - MVC web application example</h1>
   <hr>
 
-  <h2>Your name is ${name}</h2>
+  <h2>Player ${name}</h2>
+  <h2>Points ${points}</h2>
+  <h2>ID ${id}</h2>
 
 </body>
 </html>

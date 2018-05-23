@@ -19,6 +19,7 @@ public class User {
     private int points;
     private List<Place> places;
 
+
     public User() {
         this.places = new ArrayList<>();
     }
