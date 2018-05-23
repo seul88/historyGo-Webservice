@@ -15,9 +15,14 @@
 
 <body>
 
-<c:forEach items="${users}" var="module">
-    ${module.name}  :  ${module.points}</br>
-
+<c:forEach items="${users}" var="player">
+    <tabele>
+        <tr></tr>
+        <td>
+    ${player.name}  :  ${player.points}</br>  :  <form action="hello" method="post"><input type = "hidden" name="name" value="${player.name}"><input type="submit" value="Search"></form>
+        </td>
+    </tabele>
+        </br> </br>
 </c:forEach>
 
 
