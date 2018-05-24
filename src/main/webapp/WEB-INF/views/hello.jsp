@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
 <title>Spring Boot</title>
 </head>
-<body>
+<body style="background-color: aliceblue">
+
   <h1>Player ${name} details</h1>
   <hr>
 
@@ -14,10 +15,15 @@
   <h2>Points: ${points}</h2>
   <h2>ID: ${id}</h2>
   <h3>Visited places: </h3>
+  <div class="form3">
   <c:forEach items="${places}" var="player">
-    ${player.name}</br>
-    ${player.description}</br>
-    ${player.points}</br></br>
+
+      ${player.name}</br>
+      ${player.description}</br>
+      ${player.points}</br></br>
+
+
   </c:forEach>
+    </div>
 </body>
 </html>

@@ -10,8 +10,9 @@
 
 <title>HistoryGO</title>
 </head>
-<body>
-  <h1>HistoryGO Players' Database</h1>
+<body style="background-color: aliceblue">
+<div class="form3">
+<h1>HistoryGO Players' Database</h1>
   <hr>
 
   <div class="form">
@@ -34,6 +35,6 @@
     <input type="submit" value="Find Player">
     </form>
   </div>
-
+</div>
 </body>
 </html>

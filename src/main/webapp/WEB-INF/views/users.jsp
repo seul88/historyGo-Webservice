@@ -13,20 +13,22 @@
     <title>HistoryGO</title>
 </head>
 
-<body>
-
+<body style="background-color: aliceblue">
+<div class="form3">
 <c:forEach items="${users}" var="player">
-    <tabele>
-        <tr></tr>
-        <td>
-    ${player.name}  :  ${player.points}</br>  :  <form action="hello" method="post"><input type = "hidden" name="name" value="${player.name}"><input type="submit" value="Search"></form>
-        </td>
-    </tabele>
-        </br> </br>
+    <form action="hello" method="post">
+        <table>
+            <tr>
+                <td> ${player.name}  :   ${player.points} <input type = "hidden" name="name" value="${player.name}"> <input type="submit" value="Search"> </td>
+            </tr>
+        </table>
+    </form>
+
+        </br> <hr> </br>
 </c:forEach>
 
 
-
+</div>
 
 </body>
 

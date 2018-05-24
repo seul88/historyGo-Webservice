@@ -5,10 +5,10 @@
 <head>
     <title>Error</title>
 </head>
-<body>
-
-
+<body style="background-color: aliceblue">
+<div class="form3">
 <h1 style="color:red">${errorMessage}</h1>
 
+</div>
 </body>
 </html>
