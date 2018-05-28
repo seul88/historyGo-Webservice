@@ -4,26 +4,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
-<title>Spring Boot</title>
+<title>History Go</title>
+    <link rel="stylesheet" href="/resources/css/style.css">
 </head>
 <body style="background-color: aliceblue">
+
+
+<div class="form3">
 
   <h1>Player ${name} details</h1>
   <hr>
 
-  <h2>Player: ${name}</h2>
+  <h2>Name: ${name}</h2>
   <h2>Points: ${points}</h2>
   <h2>ID: ${id}</h2>
   <h3>Visited places: </h3>
-  <div class="form3">
-  <c:forEach items="${places}" var="player">
 
-      ${player.name}</br>
-      ${player.description}</br>
-      ${player.points}</br></br>
+  <c:forEach items="${places}" var="place">
 
+      ${place.name}</br>
+      ${place.description}</br>
+      ${place.points}</br></br>
 
   </c:forEach>
+    
     </div>
 </body>
 </html>

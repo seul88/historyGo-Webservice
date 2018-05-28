@@ -17,6 +17,7 @@ public class ViewController {
    UserRepository userRepository;
 
 
+
    @RequestMapping("/")
    public String index() {
       return "index";
@@ -41,6 +42,28 @@ public class ViewController {
 
 
       return "hello";
+   }
+
+   @PostMapping("/delete")
+   public String deleteUser(@RequestParam("name") String name){
+      User user;
+      user = userRepository.findByNameIgnoreCase(name);
+      if (user != null) {
+         userRepository.delete(user);
+      }
+      return "redirect:/";
+   }
+
+   @PostMapping("/addUser")
+   public String addUser(@RequestParam("name") String name){
+      User user = new User();
+      user.setName(name);
+      user.setPoints(0);
+      if (user.getName() != null && user.getName() != "")
+         if (userRepository.findByNameIgnoreCase(name) == null)
+               userRepository.insert(user);
+
+      return "redirect:/";
    }
 
    @PostMapping("/listUsers")

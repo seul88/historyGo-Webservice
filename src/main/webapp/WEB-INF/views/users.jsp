@@ -15,11 +15,13 @@
 
 <body style="background-color: aliceblue">
 <div class="form3">
+    <h1>HistoryGO Players' Database</h1>
+    <hr>
 <c:forEach items="${users}" var="player">
     <form action="hello" method="post">
         <table>
             <tr>
-                <td> ${player.name}  :   ${player.points} <input type = "hidden" name="name" value="${player.name}"> <input type="submit" value="Search"> </td>
+                <td> ${player.name}  :   ${player.points} <input type = "hidden" name="name" value="${player.name}"> <input type="submit" value="Details"> </td>
             </tr>
         </table>
     </form>
