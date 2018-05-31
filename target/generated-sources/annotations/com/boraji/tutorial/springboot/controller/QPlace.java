@@ -21,9 +21,15 @@ public class QPlace extends BeanPath<Place> {
 
     public final StringPath description = createString("description");
 
+    public final StringPath image = createString("image");
+
     public final StringPath name = createString("name");
 
     public final NumberPath<Integer> points = createNumber("points", Integer.class);
+
+    public final NumberPath<Double> rating = createNumber("rating", Double.class);
+
+    public final NumberPath<Integer> year = createNumber("year", Integer.class);
 
     public QPlace(String variable) {
         super(Place.class, forVariable(variable));

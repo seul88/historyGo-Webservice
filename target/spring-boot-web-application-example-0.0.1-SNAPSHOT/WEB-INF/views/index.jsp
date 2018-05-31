@@ -19,7 +19,7 @@
     <form action="hello" method="post" onsubmit="return validate()">
       <table>
         <tr>
-          <td>Enter player name</td>
+          <td>Find player's details</td>
         </tr>
         <tr>
           <td><input id="name" name="name"></td>
@@ -31,10 +31,29 @@
 
   <div class="form">
     <form action="listUsers" method="post">
-    List all players:</br>
-    <input type="submit" value="Find Player">
+    List all players</br>
+    <input type="submit" value="Find all">
     </form>
   </div>
+
+
+  <div class="form">
+    <form action="addUser" method="post">
+      Insert User</br>
+      <input name="name">
+      <input type="submit" value="Add">
+    </form>
+  </div>
+
+
+  <div class="form">
+    <form action="delete" method="post">
+      <div style="color:red;"> Delete User</br> </div>
+      <input name="name">
+      <input type="submit" value="DELETE">
+    </form>
+  </div>
+
 </div>
 </body>
 </html>

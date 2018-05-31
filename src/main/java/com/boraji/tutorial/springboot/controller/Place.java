@@ -3,18 +3,38 @@ package com.boraji.tutorial.springboot.controller;
 
 public class Place {
 
-    String name;
-    String description;
-    int points;
+    private String name;
+    private String description;
+    private int points;
+    private double rating;
+    private int year;
+    private String image;
 
-    public Place() {
+    public double getRating() {
+        return rating;
     }
 
-    public Place(String name, String description, int points) {
-        this.name = name;
-        this.description = description;
-        this.points = points;
+    public void setRating(double rating) {
+        this.rating = rating;
     }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
 
     public String getName() {
         return name;
@@ -39,4 +59,27 @@ public class Place {
     public void setPoints(int points) {
         this.points = points;
     }
+
+
+    public Place() {
+    }
+
+
+    public Place(String name, String description, int points) {
+        this.name = name;
+        this.description = description;
+        this.points = points;
+    }
+
+
+    public Place(String name, String description, int points, double rating, int year, String image) {
+        this.name = name;
+        this.description = description;
+        this.points = points;
+        this.rating = rating;
+        this.year = year;
+        this.image = image;
+    }
+
+
 }

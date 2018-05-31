@@ -21,7 +21,7 @@
     <form action="hello" method="post">
         <table>
             <tr>
-                <td> ${player.name}  :   ${player.points} <input type = "hidden" name="name" value="${player.name}"> <input type="submit" value="Details"> </td>
+                <td> <c:out value="${player.name}" />  :   <c:out value="${player.points}"/> <input type = "hidden" name="name" value="${player.name}"> <input type="submit" value="Details"> </td>
             </tr>
         </table>
     </form>

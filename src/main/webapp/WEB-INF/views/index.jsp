@@ -19,7 +19,7 @@
     <form action="hello" method="post" onsubmit="return validate()">
       <table>
         <tr>
-          <td>Enter player name</td>
+          <td>Find player's details</td>
         </tr>
         <tr>
           <td><input id="name" name="name"></td>
@@ -48,7 +48,7 @@
 
   <div class="form">
     <form action="delete" method="post">
-      <div style="color:red; font-size: 25px;"> Delete User</br> </div>
+      <div style="color:red;"> Delete User</br> </div>
       <input name="name">
       <input type="submit" value="DELETE">
     </form>

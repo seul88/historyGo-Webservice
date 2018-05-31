@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface UserRepository extends MongoRepository<User, String>, QueryDslPredicateExecutor<User> {
 
-    public User findById(String id);
+    User findById(String id);
 
     List<User> findByPointsGreaterThan(int points);
 
