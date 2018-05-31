@@ -62,6 +62,20 @@ public class PlaceController {
         this.placeRepository.save(place);
     }
 
-    
+    @GetMapping("/rating/{rating}")
+    public List<Place> findByRatingGreaterThan(@PathVariable("rating") double rating){
+
+        List<Place> places =  this.placeRepository.findByRatingGreaterThan(rating);
+
+        return places;
+    }
+
+    @GetMapping("/points/{points}")
+    public List<Place> findByPointsGreaterThan(@PathVariable("points") int points){
+
+        List<Place> places =  this.placeRepository.findByPointsGreaterThan(points);
+
+        return places;
+    }
 
 }
