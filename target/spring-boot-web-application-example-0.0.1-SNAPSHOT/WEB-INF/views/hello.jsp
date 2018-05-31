@@ -12,19 +12,19 @@
 
 <div class="form3">
 
-  <h1>Player ${name} details</h1>
+  <h1>Player <c:out value="${name}"/> details</h1>
   <hr>
 
-  <h2>Name: ${name}</h2>
-  <h2>Points: ${points}</h2>
-  <h2>ID: ${id}</h2>
+  <h2>Name: <c:out value="${name}"/></h2>
+  <h2>Points: <c:out value="${points}"/></h2>
+  <h2>ID: <c:out value="${id}"/></h2>
   <h3>Visited places: </h3>
 
   <c:forEach items="${places}" var="place">
 
-      Name: ${place.name}</br></br>
-      Description: ${place.description}</br></br>
-      Points: ${place.points}</br></br><hr></br>
+      Name: <c:out value="${place.name}"/></br></br>
+      Description: <c:out value="${place.description}"/></br></br>
+      Points: <c:out value="${place.points}"/></br></br><hr></br>
 
   </c:forEach>
 

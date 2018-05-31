@@ -1,7 +1,10 @@
-com\boraji\tutorial\springboot\controller\UserController.class
-com\boraji\tutorial\springboot\controller\QUser.class
-com\boraji\tutorial\springboot\controller\QPlace.class
-com\boraji\tutorial\springboot\controller\UserRepository.class
-com\boraji\tutorial\springboot\MainApp.class
-com\boraji\tutorial\springboot\controller\User.class
-com\boraji\tutorial\springboot\controller\Place.class
+com\historygo\controller\QUser.class
+com\historygo\MainApp.class
+com\historygo\controller\place\PlaceRepository.class
+com\historygo\controller\Place.class
+com\historygo\controller\UserRepository.class
+com\historygo\controller\UserController.class
+com\historygo\controller\place\PlaceController.class
+com\historygo\controller\ViewController.class
+com\historygo\controller\QPlace.class
+com\historygo\controller\User.class
