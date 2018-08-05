@@ -92,7 +92,7 @@
         <form action="listUsers" method="post">
             <div class="row">
                 <div class="col-sm-8"> <h4> Wylistuj wszystkich graczy </h4> </div>
-                <div class="col-sm-4 float-left"> <input type="submit" class="btn btn-info float-left" value="Znajd¼ wszystkich"></div>
+                <div class="col-sm-4 float-left"> <input type="submit" class="btn btn-info" value="Znajd¼ wszystkich"></div>
             </div>
         </form>
 </div>
@@ -119,6 +119,7 @@
                 <div class="col-sm-2">  <input type="submit" class="btn btn-danger" value="USUÑ"> </div>
             </div>
         </form>
+
 
 
 </div>
