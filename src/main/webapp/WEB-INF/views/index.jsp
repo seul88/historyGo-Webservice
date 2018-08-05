@@ -1,59 +1,132 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-2" pageEncoding="ISO-8859-2"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <head>
 
-<!-- Static content -->
-<link rel="stylesheet" href="/resources/css/style.css">
-<script type="text/javascript" src="/resources/js/app.js"></script>
 
-<title>HistoryGO</title>
-</head>
-<body style="background-color: aliceblue">
-<div class="form3">
-<h1>HistoryGO Players' Database</h1>
-  <hr>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Static content -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/resources/css/style.css">
+        <script type="text/javascript" src="/resources/js/app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <title>HistoryGO</title>
 
-  <div class="form">
+
+            <style>
+                .color-1{
+                    background-color: #F8E4CC;
+                    color: #153450;
+                }
+
+                .color-2{
+                    background-color: #447294;
+                    color: #F4D6BC;
+                }
+
+                .color-3{
+                    background-color: #8FBCDB;
+                    color: #153450;
+                }
+
+                .color-4{
+                    background-color: #153450;
+                    color: #F8E4CC;
+                }
+
+                .container-padding-large {
+                    padding-top: 150px;
+                    padding-bottom: 150px;
+                }
+
+                .container-padding-big {
+                    padding-top: 70px;
+                    padding-bottom: 70px;
+                }
+
+                .container-padding-small {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
+            </style>
+
+    </head>
+
+<body>
+
+<div class="container-fluid container-padding-small color-1 text-center">
+    <h1 class="display-2">HistoryGO</h1>
+    <h1><small>Panel administracyjny</small></h1>
+</div>
+
+
+<div class="container-fluid  container-padding-big color-3 text-center">
     <form action="hello" method="post" onsubmit="return validate()">
-      <table>
-        <tr>
-          <td>Find player's details</td>
-        </tr>
-        <tr>
-          <td><input id="name" name="name"></td>
-          <td><input type="submit" value="Search"></td>
-        </tr>
-      </table>
+
+    <div class="row">
+        <div class="col-sm-8"><h4> Wyszukaj u¿ytkownika i zobacz szczegó³owe dane o koncie </h4></div>
+
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <input type="text" class="form-control"  name="name" placeholder="Nickname gracza">
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Szukaj">
+                    </div>
+                </div>
+
+
+     </div>
+
     </form>
-  </div>
-
-  <div class="form">
-    <form action="listUsers" method="post">
-    List all players</br>
-    <input type="submit" value="Find all">
-    </form>
-  </div>
+</div>
 
 
-  <div class="form">
-    <form action="addUser" method="post">
-      Insert User</br>
-      <input name="name">
-      <input type="submit" value="Add">
-    </form>
-  </div>
+<div class="container-fluid container-padding-big color-4 text-center">
+        <form action="listUsers" method="post">
+            <div class="row">
+                <div class="col-sm-8"> <h4> Wylistuj wszystkich graczy </h4> </div>
+                <div class="col-sm-4 float-left"> <input type="submit" class="btn btn-info float-left" value="Znajd¼ wszystkich"></div>
+            </div>
+        </form>
+</div>
 
 
-  <div class="form">
-    <form action="delete" method="post">
-      <div style="color:red;"> Delete User</br> </div>
-      <input name="name">
-      <input type="submit" value="DELETE">
-    </form>
-  </div>
+<div class="container-fluid container-padding-big color-2 text-center">
+        <form action="addUser" method="post">
+            <div class="row">
+                <div class="col-sm-8"> <h4> Dodaj u¿ytkownika do bazy </h4> </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control"  name="name" placeholder="Nickname gracza">
+                </div>
+                <div class="col-sm-2"> <input type="submit" class="btn btn-warning" value="Dodaj"> </div>
+            </div>
+        </form>
+</div>
+
+
+<div class="container-fluid container-padding-big color-4 text-center">
+        <form action="delete" method="post">
+            <div class="row">
+                <div class="col-sm-8"> <div class="text-danger">  <h4> USUÑ U¯YTKOWNIKA Z BAZY </h4>  </div></div>
+                <div class="col-sm-2"> <input name="name" type="text" class="form-control" placeholder="Nickname gracza" > </div>
+                <div class="col-sm-2">  <input type="submit" class="btn btn-danger" value="USUÑ"> </div>
+            </div>
+        </form>
+
 
 </div>
+
+
+
+
+
+
 </body>
 </html>
