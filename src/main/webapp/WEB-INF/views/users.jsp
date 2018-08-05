@@ -26,7 +26,7 @@
 
     <body style="background-color: aliceblue">
 
-        <div class="jumbotron text-center"> <h1>HistoryGO - U¿ytkownicy </h1>
+        <div class="jumbotron text-center">  <h1 class="display-1"> U¿ytkownicy </h1>
         </div>
 
 

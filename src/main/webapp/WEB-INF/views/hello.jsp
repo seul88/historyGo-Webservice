@@ -15,27 +15,36 @@
         <title>HistoryGO</title>
         <link rel="stylesheet" href="/resources/css/style.css">
     </head>
-<body style="background-color: aliceblue">
+    <body style="background-color: aliceblue">
 
 
-    <div>
+        <div class="jumbotron text-center">  <h1 class="display-1">  Profil gracza </h1>
+        </div>
 
-  <h1>Player <c:out value="${name}"/> details</h1>
-  <hr>
 
-  <h2>Name: <c:out value="${name}"/></h2>
-  <h2>Points: <c:out value="${points}"/></h2>
-  <h2>ID: <c:out value="${id}"/></h2>
-  <h3>Visited places: </h3>
+        <div class="container-fluid">
 
-  <c:forEach items="${places}" var="place">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1 class="display-1"><c:out value="${name}"/></h1>
 
-      Name: <c:out value="${place.name}"/></br></br>
-      Description: <c:out value="${place.description}"/></br></br>
-      Points: <c:out value="${place.points}"/></br></br><hr></br>
+                    <h1><small>Liczba punktów:</small> <c:out value="${points}"/></h1>
+                    <h1><small>Id gracza:</small>  <c:out value="${id}"/></h1>
+                    <h1><small>Data rejestracji:</small> </h1>
+                </div>
 
-  </c:forEach>
+                <div class="col-sm-8">
+                    <h1 class="display-3"> Lista odwiedzonych miejsc </h1>
 
-    </div>
-</body>
+                  <c:forEach items="${places}" var="place">
+
+                      Name: <c:out value="${place.name}"/></br></br>
+                      Description: <c:out value="${place.description}"/></br></br>
+                      Points: <c:out value="${place.points}"/></br></br><hr></br>
+
+                  </c:forEach>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
